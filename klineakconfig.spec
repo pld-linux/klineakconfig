@@ -2,14 +2,14 @@ Summary:	Program to map and configure your Easy Access Keys
 Summary(pl):	Program do mapowania i konfiguracji klawiszy LinEAK
 Name:		klineakconfig
 Version:	0.5.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lineak/%{name}-%{version}.tar.gz
 # Source0-md5:	c20d9121f7dd81b978e85f20c5165e13
 URL:		http://lineak.sourceforge.net/
 BuildRequires:	kdelibs-devel
-BuildRequires:	lineakd
+BuildRequires:	lineakd-defs
 Requires:	lineakd >= 0.4pre2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +32,6 @@ kde_htmldir="%{_htmldir}"; export kde_htmldir
 kde_icondir="%{_pixmapsdir}"; export kde_icondir
 
 %configure2_13
-
 %{__make}
 
 %install
