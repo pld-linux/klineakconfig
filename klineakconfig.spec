@@ -8,8 +8,11 @@ Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lineak/%{name}-%{version}.tar.gz
 URL:		http://lineak.sourceforge.net/
 BuildRequires:	kdelibs-devel
+BuildRequires:	lineakd
 Requires:	lineakd >= 0.4pre2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_htmldir	/usr/share/doc/kde/HTML
 
 %description
 KlineakConfig is a configuration and control program for the lineakd
@@ -23,6 +26,10 @@ pozwalaj±cym na korzystanie z "klawiszy ³atwego dostêpu".
 %setup -q
 
 %build
+kde_appsdir="%{_applnkdir}"; export kde_appsdir
+kde_htmldir="%{_htmldir}"; export kde_htmldir
+kde_icondir="%{_pixmapsdir}"; export kde_icondir
+
 %configure2_13
 
 %{__make}
@@ -41,4 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/klineakconfig
-%{_datadir}/klineakconfig
+%{_datadir}/apps/klineakconfig
+%{_applnkdir}/Applications/*.desktop
+%{_pixmapsdir}/*/*/apps/*.png
