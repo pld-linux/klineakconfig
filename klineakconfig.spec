@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lineak/%{name}-%{version}.tar.gz
+# Source0-md5:	c20d9121f7dd81b978e85f20c5165e13
 URL:		http://lineak.sourceforge.net/
 BuildRequires:	kdelibs-devel
 BuildRequires:	lineakd
