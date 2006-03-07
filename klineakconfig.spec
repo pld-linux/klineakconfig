@@ -1,15 +1,17 @@
 Summary:	Program to map and configure your Easy Access Keys
 Summary(pl):	Program do mapowania i konfiguracji klawiszy LinEAK
 Name:		klineakconfig
-Version:	0.5.1
-Release:	2
+%define		beta	beta2
+Version:	0.8
+Release:	%{beta}.0.1
 License:	GPL
 Group:		Applications/System
-Source0:	http://dl.sourceforge.net/lineak/%{name}-%{version}.tar.gz
-# Source0-md5:	c20d9121f7dd81b978e85f20c5165e13
+Source0:	http://dl.sourceforge.net/lineak/%{name}-%{version}-%{beta}.tar.gz
+# Source0-md5:	c6401c480d32112bbbd82972c41c4d7e
 URL:		http://lineak.sourceforge.net/
 BuildRequires:	kdelibs-devel
 BuildRequires:	lineakd-defs
+BuildRequires:	lineakd-devel
 Requires:	lineakd >= 0.4pre2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,10 +26,10 @@ KlineakConfig to program do konfiguracji i sterowania demonem lineakd
 pozwalaj±cym na korzystanie z "klawiszy ³atwego dostêpu".
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-%{beta}
 
 %build
-kde_appsdir="%{_applnkdir}"; export kde_appsdir
+kde_appsdir="%{_desktopdir}"; export kde_appsdir
 kde_htmldir="%{_htmldir}"; export kde_htmldir
 kde_icondir="%{_pixmapsdir}"; export kde_icondir
 
@@ -49,5 +51,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/klineakconfig
 %{_datadir}/apps/klineakconfig
-%{_applnkdir}/Applications/*.desktop
+%{_desktopdir}/Applications/*.desktop
 %{_pixmapsdir}/*/*/apps/*.png
