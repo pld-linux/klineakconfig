@@ -8,6 +8,7 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lineak/%{name}-%{version}-%{beta}.tar.gz
 # Source0-md5:	c6401c480d32112bbbd82972c41c4d7e
+Patch0:		%{name}-desktop.patch
 URL:		http://lineak.sourceforge.net/
 BuildRequires:	kdelibs-devel
 BuildRequires:	lineakd-defs
@@ -27,6 +28,7 @@ pozwalaj±cym na korzystanie z "klawiszy ³atwego dostêpu".
 
 %prep
 %setup -q -n %{name}-%{version}-%{beta}
+%patch0 -p1
 
 %build
 kde_appsdir="%{_desktopdir}"; export kde_appsdir
@@ -43,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name} --with-kde
 
-mv $RPM_BUILD_ROOT%{_desktopdir}/{Applications/,}*.desktop
+#mv $RPM_BUILD_ROOT%{_desktopdir}/{Applications/,}*.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
