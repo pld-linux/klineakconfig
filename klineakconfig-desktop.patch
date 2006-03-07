@@ -1,0 +1,15 @@
+--- klineakconfig-0.8-beta2/klineakconfig/Makefile.in.orig	2005-03-16 16:15:15.000000000 +0100
++++ klineakconfig-0.8-beta2/klineakconfig/Makefile.in	2006-03-07 22:34:09.000000000 +0100
+@@ -613,10 +613,10 @@
+ install-data-local:
+ #>- 	$(mkinstalldirs) $(kde_appsdir)/Applications/
+ #>+ 1
+-	$(mkinstalldirs) $(DESTDIR)$(kde_appsdir)/Applications/
++	$(mkinstalldirs) $(DESTDIR)$(kde_appsdir)/
+ #>- 	$(INSTALL_DATA) $(srcdir)/klineakconfig.desktop $(kde_appsdir)/Applications/klineakconfig.desktop
+ #>+ 1
+-	$(INSTALL_DATA) $(srcdir)/klineakconfig.desktop $(DESTDIR)$(kde_appsdir)/Applications/klineakconfig.desktop
++	$(INSTALL_DATA) $(srcdir)/klineakconfig.desktop $(DESTDIR)$(kde_appsdir)/klineakconfig.desktop
+ #>- 	$(mkinstalldirs) $(kde_icondir)/locolor/32x32/apps/
+ #>+ 1
+ 	$(mkinstalldirs) $(DESTDIR)$(kde_icondir)/locolor/32x32/apps/
