@@ -43,6 +43,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name} --with-kde
 
+mv $RPM_BUILD_ROOT%{_desktopdir}/{Applications/,}*.desktop
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -51,5 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/klineakconfig
 %{_datadir}/apps/klineakconfig
-%{_desktopdir}/Applications/*.desktop
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*/*/apps/*.png
