@@ -5,7 +5,7 @@ Name:		klineakconfig
 Version:	0.8
 Release:	%{beta}.0.1
 License:	GPL
-Group:		Applications/System
+Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/lineak/%{name}-%{version}-%{beta}.tar.gz
 # Source0-md5:	c6401c480d32112bbbd82972c41c4d7e
 Patch0:		%{name}-desktop.patch
