@@ -28,7 +28,7 @@ KlineakConfig to program do konfiguracji i sterowania demonem lineakd
 pozwalaj±cym na korzystanie z "klawiszy ³atwego dostêpu".
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 %patch0 -p1
 
 # kill stupid plugin dir existence test
