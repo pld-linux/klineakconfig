@@ -1,5 +1,5 @@
 Summary:	Program to map and configure your Easy Access Keys
-Summary(pl):	Program do mapowania i konfiguracji klawiszy LinEAK
+Summary(pl.UTF-8):   Program do mapowania i konfiguracji klawiszy LinEAK
 Name:		klineakconfig
 %define		beta	beta2
 Version:	0.9
@@ -23,9 +23,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 KlineakConfig is a configuration and control program for the lineakd
 daemon that provides access to your keyboards easy access keys.
 
-%description -l pl
+%description -l pl.UTF-8
 KlineakConfig to program do konfiguracji i sterowania demonem lineakd
-pozwalaj±cym na korzystanie z "klawiszy ³atwego dostêpu".
+pozwalajÄ…cym na korzystanie z "klawiszy Å‚atwego dostÄ™pu".
 
 %prep
 %setup -q
