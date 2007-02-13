@@ -1,5 +1,5 @@
 Summary:	Program to map and configure your Easy Access Keys
-Summary(pl.UTF-8):   Program do mapowania i konfiguracji klawiszy LinEAK
+Summary(pl.UTF-8):	Program do mapowania i konfiguracji klawiszy LinEAK
 Name:		klineakconfig
 %define		beta	beta2
 Version:	0.9
