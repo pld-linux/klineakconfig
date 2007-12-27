@@ -1,9 +1,9 @@
+%define		beta	beta2
 Summary:	Program to map and configure your Easy Access Keys
 Summary(pl.UTF-8):	Program do mapowania i konfiguracji klawiszy LinEAK
 Name:		klineakconfig
-%define		beta	beta2
 Version:	0.9
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/lineak/%{name}-%{version}.tar.gz
@@ -52,6 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 	 DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name} --with-kde
+
+rm -rf $RPM_BUILD_ROOT%{_datadir}/icons/locolor
 
 %clean
 rm -rf $RPM_BUILD_ROOT
